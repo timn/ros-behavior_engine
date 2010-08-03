@@ -1,3 +1,6 @@
 [submodule "lua_utils"]
 	path = lua_utils
 	url = ../lua_utils.git
+[submodule "skiller"]
+	path = skiller
+	url = ../skiller.git
