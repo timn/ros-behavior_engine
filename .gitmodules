@@ -7,3 +7,6 @@
 [submodule "actionlib_lua"]
 	path = actionlib_lua
 	url = ../actionlib_lua.git
+[submodule "fawkes_lua"]
+	path = fawkes_lua
+	url = ../fawkes_lua.git
