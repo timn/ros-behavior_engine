@@ -4,3 +4,6 @@
 [submodule "skiller"]
 	path = skiller
 	url = ../skiller.git
+[submodule "actionlib_lua"]
+	path = actionlib_lua
+	url = ../actionlib_lua.git
