@@ -10,3 +10,6 @@
 [submodule "fawkes_lua"]
 	path = fawkes_lua
 	url = ../fawkes_lua.git
+[submodule "herb_skills"]
+	path = herb_skills
+	url = ../herb_skills.git
