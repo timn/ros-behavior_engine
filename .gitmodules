@@ -13,3 +13,6 @@
 [submodule "herb_skills"]
 	path = herb_skills
 	url = ../herb_skills.git
+[submodule "skillgui"]
+	path = skillgui
+	url = ../skillgui.git
