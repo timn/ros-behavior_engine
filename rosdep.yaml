@@ -36,7 +36,7 @@ glibmm24:
   ubuntu: libglibmm-2.4-dev
 libgraphviz:
   fedora: graphviz-devel
-  ubuntu: libgrapvhviz-dev
+  ubuntu: libgraphviz-dev
 libglademm24:
   fedora: libglademm24-devel
   ubuntu: libglademm-2.4-dev
