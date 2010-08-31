@@ -1,0 +1,42 @@
+lua:
+  fedora: lua
+  ubuntu: lua5.1
+lua-md5:
+  fedora: lua-md5
+  ubuntu: liblua5.1-md5-0
+lua-posix:
+  fedora: lua-posix
+  ubuntu: liblua5.1-posix1
+lua-socket:
+  fedora: lua-socket
+  ubuntu: liblua5.1-socket2
+lua-wsapi:
+  fedora: lua-wsapi
+  ubuntu: liblua5.1-wsapi1
+lua-xmlrpc:
+  fedora: lua-xmlrpc
+  ubuntu: liblua5.1-xmlrpc0
+tolua++:
+  fedora: tolua++
+  ubuntu: libtolua++5.1-dev
+xavante:
+  fedora: xavante
+  ubuntu: xavante
+gtkmm24:
+  fedora: gtkmm24-devel
+  ubuntu: libgtkmm-2.4-dev
+gconfmm26:
+  fedora: gconfmm26-devel
+  ubuntu: libgconfmm-2.6-dev
+glademm24:
+  fedora: libglademm24-devel
+  ubuntu: libglademm-2.4-dev
+glibmm24:
+  fedora: glibmm24-devel
+  ubuntu: libglibmm-2.4-dev
+libgraphviz:
+  fedora: graphviz-devel
+  ubuntu: libgrapvhviz-dev
+libglademm24:
+  fedora: libglademm24-devel
+  ubuntu: libglademm-2.4-dev
