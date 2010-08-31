@@ -5,5 +5,5 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/behavior_engine</url>
   <depend stack="ros" /> <!-- roslib, roscpp -->
-
+  <depend stack="roslua" /> <!-- roslib, roscpp -->
 </stack>
