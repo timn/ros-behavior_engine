@@ -16,3 +16,6 @@
 [submodule "skillgui"]
 	path = skillgui
 	url = ../skillgui.git
+[submodule "luaagent"]
+	path = luaagent
+	url = ../luaagent.git
