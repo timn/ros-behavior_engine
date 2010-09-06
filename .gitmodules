@@ -19,3 +19,6 @@
 [submodule "luaagent"]
 	path = luaagent
 	url = ../luaagent.git
+[submodule "herb_agents"]
+	path = herb_agents
+	url = ../herb_agents.git
