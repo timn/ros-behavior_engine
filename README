@@ -1,0 +1,93 @@
+
+behavior_engine: Behavior Engine stack for ROS
+==============================================
+
+This stack provides the Behavior Engine, an environment to develop, execute,
+and monitor robot behavior. It uses Lua to create this environment, an in
+particular roslua to interact with ROS [1]. It has been ported from the
+Fawkes robot software framework [2]. We aim to provide an environment, which
+eradicates as many differences from the underlying base system as possible,
+to have a unified development environment for robotic behavior on both
+robot software systems.
+
+The behavior engine and its underlying concepts has been described in [3],
+and to a greater detail in [4].
+
+[1] http://www.ros.org
+[2] http://www.fawkesrobotics.org
+[3] "A Lua-based Behavior Engine for Controlling the Humanoid Robot Nao",
+    Tim Niemueller, Alexander Ferrein, and Gerhard Lakemeyer
+    In Proc. of the RoboCup Symposium 2009, Graz, Austria (Springer)
+    http://fawkesrobotics.org/publications/2009/rc2009-lua-behavior-engine/
+[4] "Developing A Behavior Engine for the Fawkes Robot-Control Software and
+    its Adaptation to the Humanoid Platform Nao"
+    Tim Niemueller
+    Master's Thesis, RWTH Aachen University, 2009
+
+Packages
+--------
+The following packages are included in this stack:
+ actionlib_lua::
+  This package is used to make actionlib actions available in the Lua
+  environment. Actionlib is the main interaction entity with the underlying
+  base system on ROS.
+
+ fawkes_lua::
+  Lua code ported straight from Fawkes, provding general utilities and finite
+  and hybrid state machines.
+
+ lua_utils::
+  C++ utility classes to interact with the Lua interpreter context, ported
+  straight from Fawkes.
+
+ skiller::
+  The skill execution and runtime environment is the core of the behavior
+  engine. It provides the Lua environment for developing, executing, and
+  monitoring skills, reactive execution entities.
+
+ luaagent::
+  The concept of reactive execution of the skiller has been applied to the
+  high-level task description for easy prototyping and testing the skiller
+  interaction with high-level agents. This package provides the run-time
+  environment for such agent programs.
+
+ skillgui::
+  A GUI application to instruct and monitor skiller and luaagent. It can
+  display the state machines and execution trace in real-time.
+
+ herb_skills::
+  A package containing several skills for HERB, the Home Exploring Robot
+  Butler at Intel Labs Pittsburgh. Although specific to the particular
+  platform and domain, it can still serve as a documenting example.
+
+ herb_agents::
+  This package contains high-level agent specifications for HERB at Intel
+  Labs Pittsburgh.
+
+Requirements
+------------
+The Behavior Engine requires roslua (http://github.com/timn/roslua) to
+interact with ROS. Please download it separately and make sure that it is
+working.
+
+There are several packages required on your local system by the packages
+that compose this stack. The easiest way to get everything needed is to use
+rosdep, as all dependencies have been properly documented. Execute:
+
+rosdep satisfy behavior_engine
+
+It will give you a command line that you need to execute as root to get all
+required packages.
+
+Installation
+------------
+Download the behavior_engine stack and add it to your ROS package path.
+Ensure that roslua is working on your system by executing the examples that
+come with it. Also call rosdep as described above to install the system
+dependencies. Then build the software with "rosmake behavior_engine".
+
+Documentation
+-------------
+The source code of all modules is fully documented (API). Guides and more
+descriptive is currently work in progress.
+
