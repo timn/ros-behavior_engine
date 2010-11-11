@@ -1,9 +1,9 @@
 <stack>
   <description brief="behavior_engine">behavior_engine</description>
   <author>Maintained by Tim Niemueller</author>
-  <license>GPLv2+</license>  
+  <license>BSD and GPLv2+</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/behavior_engine</url>
-  <depend stack="ros" /> <!-- roslib, roscpp -->
-  <depend stack="roslua" /> <!-- roslib, roscpp -->
+  <depend stack="ros" />
+  <depend stack="roslua" />
 </stack>
