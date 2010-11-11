@@ -1,24 +1,24 @@
 [submodule "lua_utils"]
 	path = lua_utils
-	url = ../lua_utils.git
+	url = ../ros-lua_utils.git
 [submodule "skiller"]
 	path = skiller
-	url = ../skiller.git
+	url = ../ros-skiller.git
 [submodule "actionlib_lua"]
 	path = actionlib_lua
-	url = ../actionlib_lua.git
+	url = ../ros-actionlib_lua.git
 [submodule "fawkes_lua"]
 	path = fawkes_lua
-	url = ../fawkes_lua.git
+	url = ../ros-fawkes_lua.git
 [submodule "herb_skills"]
 	path = herb_skills
-	url = ../herb_skills.git
+	url = ../ros-herb_skills.git
 [submodule "skillgui"]
 	path = skillgui
-	url = ../skillgui.git
+	url = ../ros-skillgui.git
 [submodule "luaagent"]
 	path = luaagent
-	url = ../luaagent.git
+	url = ../ros-luaagent.git
 [submodule "herb_agents"]
 	path = herb_agents
-	url = ../herb_agents.git
+	url = ../ros-herb_agents.git
