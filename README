@@ -72,7 +72,8 @@ working.
 
 There are several packages required on your local system by the packages
 that compose this stack. The easiest way to get everything needed is to use
-rosdep, as all dependencies have been properly documented. Execute:
+rosdep, as all dependencies have been properly documented. Make sure you
+have downloaded the stack before doing this as described below. Execute:
 
 rosdep satisfy behavior_engine
 
@@ -82,9 +83,12 @@ required packages.
 Installation
 ------------
 Download the behavior_engine stack and add it to your ROS package path.
+git clone --recursive git://github.com/timn/ros-behavior_engine.git
+
 Ensure that roslua is working on your system by executing the examples that
 come with it. Also call rosdep as described above to install the system
 dependencies. Then build the software with "rosmake behavior_engine".
+
 
 Documentation
 -------------
