@@ -1,10 +1,11 @@
 <stack>
   <description brief="behavior_engine">behavior_engine</description>
   <author>Maintained by Tim Niemueller</author>
-  <license>BSD and GPLv2+</license>  
+  <license>GPLv2+,BSD,BSD and GPLv2+</license>  
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/behavior_engine</url>
   <depend stack="common" /> <!-- actionlib -->
   <depend stack="common_msgs" /> <!-- actionlib_msgs -->
+  <depend stack="node_monitoring" /> <!-- nodemon_msgs -->
   <depend stack="ros" /> <!-- roslib, roscpp -->
 </stack>
