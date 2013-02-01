@@ -1,0 +1,14 @@
+<package>
+  <description brief="example_skills">
+    Example skills to demonstrate the be.
+  </description>
+  <author>Tim Niemueller</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/example_skills</url>
+  <depend package="skiller"/>
+  <depend package="roslua"/>
+  <depend package="actionlib_lua"/>
+  <depend package="actionlib_msgs"/>
+  <depend package="fawkes_lua"/>
+</package>

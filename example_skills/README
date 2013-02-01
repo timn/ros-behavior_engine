@@ -1,0 +1,75 @@
+
+example_skills: example skill set
+=================================
+
+This package provides the set of skills to demonstrate the Behavior Engine.
+
+
+Running the example skills
+--------------------------
+At a glance: to test run the actionservertest.lua from actionlib.lua, the
+skiller, and the skillgui and execute the print_fibo skill.
+
+In more detail:
+We assume you have roslua and the behavior_engine checked out and built
+roslua, lua_utils, skiller, and skillgui. Then make sure that roslua is
+in the LUA path environment variables. For example like so:
+
+# export LUA_PATH="/path/to/roslua/src/?/init.lua;/path/to/roslua/src/?.lua;/usr/share/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua"
+Replace "/path/to" with the actual path to your roslua directory. Check if
+the generic Lua path is correct.
+
+Make sure you have checked out and built the actionlib_tutorials package,
+cf. http://www.ros.org/wiki/actionlib_tutorials. It is required for the
+action message types.
+# rosmake actionlib_tutorials
+
+Then run the actionlib serve test script in one terminal and leave it running:
+# roscd actionlib_lua
+# cd src/test
+# lua actionservertest.lua
+
+Now run the skiller in another terminal and leave it running:
+# rosrun skiller skiller example_skills
+
+Then start the skillgui and execute the skill.
+# rosrun skillgui skillgui
+In the skillgui, type into the entry field at the very bottom of the app
+the following string: print_fibo()
+Then press the "Execute" button next to it. You will see the state graph
+in the main area of the window.
+
+
+What happens under the hood?
+----------------------------
+1.) skillgui invokes skiller action
+The skillgui calls the skiller via an action that contains the string you
+typed into the text entry.
+2.) skiller executes the skill
+The example_skills skill space contains two skills (cf. example_skills.lua).
+One is an automatically generated action skill, i.e. it invokes a ROS action
+and wraps it into a skill. More interesting is print_fibo.lua. It contains
+a custom skill and demonstrates a few features of the skiller. Check the file
+for comments. When the skiller is started, the two skills are instantiated.
+When the skill execution action is invoked by the skillgui, the received
+string is compiled into a Lua program and executed with the sandbox as its
+environment. Hence the print_fibo skill appears as a function in the sandbox.
+It is executed in each iteration of the skiller (at about 25 Hz).
+3.) print_fibo skill execution
+The print_fibo skill first prints something to the log (rosout and console
+output of skiller) and then invokes the auto-generated fibonacci skill as a
+sub-skill. Depending on the outcome it goes to a success or failure state.
+Note that the actionlib test server announces failure with a probability of
+0.2. So every now and then the execution will fail, and this is intended. If
+it fails everytime, something is wrong in your setup.
+The skill also subscribes to the result topic of the fibonacci action. After
+completion, the success state waits for a message to be received on this topic
+and prints it. It asserts a field in the variable table. This very field is
+used in "add_transitions" above to trigger a transition to the FINAL state.
+The skill has completed.
+4.) skillgui receives result
+The skiller now sends the result back to the skillgui. The skillgui will
+indicate that the skill has completed. If the execution failed (e.g. because
+of the intended small chance of failing in the action server), the error
+is communicated as a string.
+
